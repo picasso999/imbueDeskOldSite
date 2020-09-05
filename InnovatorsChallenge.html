@@ -1,0 +1,597 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>ImbueDesk</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="ImbueDesk" />
+    <meta name="keywords" content="Career, student, development, startup, India, education, college, university" />
+    <meta name="author" content="Puranam Pradeep Picasso" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="demo-images/logo.png" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i,900|Montserrat:400,700|PT+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href='css/clear.css' />
+    <link rel="stylesheet" type="text/css" href='css/common.css' />
+    <link rel="stylesheet" type="text/css" href='css/font-awesome.min.css' />
+    <link rel="stylesheet" type="text/css" href='css/carouFredSel.css' />
+    <link rel="stylesheet" type="text/css" href='css/prettyPhoto.css' />
+    <link rel="stylesheet" type="text/css" href='css/sm-clean.css' />
+    <link rel="stylesheet" type="text/css" href='style1.css' />
+
+    <!--[if lt IE 9]>
+                <script src="js/html5.js"></script>
+        <![endif]-->
+
+    <style>
+        input {
+            border: 2px solid rgb(180, 34, 34);
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            /* position: relative;
+        display: block;*/
+            text-align: center;
+            font-size: 2em;
+            *height: 1.5em;
+            line-height: 1.5em;
+            padding: 0.29em 0;
+            margin: 0 0 0.5em;
+            width: 80%;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script>
+        (function($) {
+            jQuery.expr[':'].Contains = function(a, i, m) {
+                return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+            };
+
+            function listFilter(header, list) {
+                var form = $("<form>").attr({
+                        "class": "filterform",
+                        "action": "#"
+                    }),
+                    input = $("<input>").attr({
+                        "class": "filterinput",
+                        "type": "text"
+                    });
+                $(form).append(input).appendTo(header);
+
+                $(input)
+                    .change(function() {
+                        var filter = $(this).val();
+                        if (filter) {
+                            $(list).find(".movieTitle:not(:Contains(" + filter + "))").parent().slideUp();
+                            $(list).find(".movieTitle:Contains(" + filter + ")").parent().slideDown();
+                        } else {
+                            $(list).find(".entry").slideDown();
+                        }
+                        return false;
+                    })
+                    .keyup(function() {
+                        $(this).change();
+                    });
+            }
+
+            $(function() {
+                listFilter($("#header"), $("#list"));
+            });
+        }(jQuery));
+    </script>
+
+    <style>
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            width: o;
+            transition: all 0.5s;
+            vertical-align: middle;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+
+</head>
+
+<body class="single-portfolio">
+
+    <!-- Preloader Gif -->
+    <!-- <table class="doc-loader">
+        <tr>
+            <td>
+                <img src="demo-images/logo.png" alt="Loading..." />
+            </td>
+        </tr>
+    </table> -->
+
+    <!-- Menu -->
+    <div class="menu-wrapper center-relative">
+        <nav id="header-main-menu">
+            <div class="mob-menu">MENU</div>
+            <ul class="main-menu sm sm-clean">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Mastery</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#news">Blog</a>
+                </li>
+                <li>
+                    <a href="#video">Video</a>
+                </li>
+                <li>
+                    <a href="#skills">Success</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <article id="portfolio-1" class="section portfolio">
+        <div class="center-relative content-1170">
+            <div class="entry-content" id="wrap">
+
+                <div class="content-wrap relative" id="list">
+                    <a class="absolute x-close" href="index.html#portfolio">
+                        <img src="images/icon_x.svg" alt="Close">
+                    </a>
+
+                    <div class="one margin-0">
+                        <img src="images/InnCha.jpg" alt="">
+                    </div>
+                    <!-- <div class="clear"></div> -->
+                    <!-- <div class="one_half margin-0">
+                            <img src="demo-images/item_img_02.jpg" alt="">
+                        </div>
+                        <div class="one_half text-right margin-0">
+                            <img src="demo-images/item_img_03.jpg" alt="">
+                        </div>
+                        <div class="clear"></div> -->
+
+                    <div class="section-content-holder text-center" >
+                        <!-- <div class="content-wrapper"> -->
+                        <div class="content-title-holder">
+                            <p class="content-title" style="font-size: 2.8em !important; text-align:center; ">INNOVATORS CHALLENGE 2019
+                                    <button class="button" style="margin: 0 40% 0 40%; text-transform: uppercase; text-decoration: solid; font-weight: bold;" type="button" onclick="window.open('https://www.instamojo.com/@Quesite/l987a6e4f4b0a4214a24d1c315d24e5ab/')">IC2019 Payment Link</button>
+                            </p>
+                            
+                        </div>
+                        
+                        
+
+
+                        <!-- </div> -->
+                    </div>
+
+                    
+
+                            
+
+                    <div class="section-content-holder text-center center-relative">
+                            <p style="margin-left: 20px;"><img src="https://www.goeventz.com/uplode/mailfiles/1549573112.jpg" style="width: 863px; height: 1219.05px;" class="fr-fic fr-dib"></p> <br/>
+
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.9em;">RULES <strong>&amp;</strong> REGULATIONS</h1>
+                        <br/>
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">1.0 INTRODUCTION</h1>
+                        <br>
+                        <p style="margin-left: 15px;">
+                            <strong>“Innovators’ Challenge 2019”</strong> competition is a program that jointly organized by <strong>ImbueDesk Educational Networking Solutions Pvt Ltd, Quesite services (OPC) Pvt Ltd, Literacy Helping Hands (NGO), Harsh Designs, Verlin Solutions, Fly Wheels</strong> & in supporting partner with <strong>“Telangana State Innovation Cell (TSIC)”</strong></p>
+
+                        <br/>
+                        
+                        <br/>
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">2.0 OBJECTIVE.</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;">
+                            <span style="color: #ff3232;">2.1:</span> To improve students’ practical skills and encourage creativity and innovation among students.
+                            <br/>
+                            <span style="color: #ff3232;">2.2:</span> As a platform for students to contribute ideas and innovations to demonstrate their ability to create and discover something new.
+                            <br>
+                            
+                            <br>
+                            <span style="color: #ff3232;">2.3:</span> To uncover the talent of students in research and development, invention and innovation.
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">2.4:</span> Gearing up to promote interest in Science, Technology, Engineering and Mathematics (STEM) Education among young minds.
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">2.5:</span> Develop and enhance students’ intellectual capacity with respect to rational, critical and creative thinking.
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">2.6:</span> <strong>CAUSE:</strong> literacy Helping Hands as part of their fundraising activities, Percentage of funds generated in this event will be donated towards 14 Girl Children Education and Rural Literacy Development in Telangana.
+                            
+                        </p>
+                        <br/>
+                        <br/>
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">3.0 THEME.</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;">
+                            <span style="color: #ff3232;">3.1:</span> <strong>Themes For The Event</strong>
+                            <br/>
+                            <ul style="margin-left: 15px;">
+                                <li>Water Conservation,&nbsp;
+                            
+                                    <ul>
+                                        <li>My Daily Life Hacker (Engineering in Daily Life),</li>
+                                        <li>Energy Conservation,&nbsp;</li>
+                                        <li>IoT,&nbsp;</li>
+                                        <li>Robotics,&nbsp;</li>
+                                        <li>Mobile/Web Apps,&nbsp;</li>
+                                        <li>Game Development (any platform development will be accepted, which can be presentable, played as per the Organizers disclosure),&nbsp;</li>
+                                        <li>Products &amp; Services solutions (for Startups), &nbsp; &nbsp; &nbsp; &nbsp;</li>
+                                        <li>Innovative STEM (Science , Technology, Engineering, Mathematics), DIY (Do It Yourself) Projects or Prototypes. (Recommended for 1st &amp; 2nd years in Engineering)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <br/>
+                            <span style="color: #ff3232; margin-left: 15px;" >3.2:</span> Your project is to invent products/ tools to make our daily lives activities easier.
+                            
+                        </p>
+                        <br/>
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">4.0 Conditions of Participation.</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;">
+                            <span style="color: #ff3232;">4.1:</span> This competition is open to students from age 13 to 23 in the year 2019.
+                            <br/>
+                            <span style="color: #ff3232;">4.2:</span> A team should comprise 1 to 5 teammates.
+                            <br>
+                            
+                            <br>
+                            <span style="color: #ff3232;">4.3:</span> Team members can be from the same college or different colleges too.
+                            
+                        </p>
+                        <br/>
+                        <br/>
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">5.0 Competition Rules &amp; Regulations.</h1>
+                        <br>
+                        
+                        <p>
+                            <p style="margin-left: 20px !important;"><span style="color: #ff3232;">5.1</span> Project must be in accordance with the theme of the competition.</p>
+
+<p style="margin-left: 20px !important;"><span style="color: #ff3232;">5.2</span> The Idea of the project must be original and not plagiarism.</p>
+
+<p style="margin-left: 20px !important;"><span style="color: #ff3232;">5.3</span> Materials used for the project must be mentioned in the Article written. (Read Submission Format for more clarity).</p>
+
+<p style="margin-left: 20px !important;"><span style="color: #ff3232;">5.4</span> Adaptation of improving existing products can be accepted as long as the improvement is totally new.&nbsp;</p>
+
+<p style="margin-left: 20px !important;"><span style="color: #ff3232;">5.5</span> The idea of the project must be original and never commercialized, displayed or forwarded to the manufacturing sector.</p>
+
+<p style="margin-left: 20px !important;"><span style="color: #ff3232;">5.6</span> Team must submit an article and video (maximum 2 minutes) demonstrating the project, further details clearly mentioned in &ldquo;Submission Format.&rdquo;</p>
+                            
+                        </p>
+                        <br/>
+                        <br/>
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">6.0 Judging Process.</h1>
+                        <br>
+                        
+                        <p>
+                            <p style="margin-left: 20px !important;"><span style="color: #ff3232;">6.1</span> First stage: Filter by Organizer</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">I.</span> All proposals and videos will be verified/ inspect by the organizer to ensure that the registration meets the conditions of participation and the procedure of registration.</p>
+
+<p style="margin-left: 20px !important;"><span style="color: #ff3232;">6.2</span> Second stage: Judging based on proposal and video.</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">I.</span> All proposals and videos received will be evaluated by the judges&rsquo; panel. The judges panel will evaluate and select the project that meets the evaluation elements to compete in finals.</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">II.</span> Assessment will be made based on the following criteria:</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">a.</span> Level of originality, creativity, and innovative projects. &ndash; 10 points each</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">b.</span> Level of usability and application projects in practical life. &ndash; 10 points</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">c.</span> Level of Teamwork. &ndash; 10 points</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">d.</span> Presentation &ndash; 10 points&nbsp;</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">e.</span> Cost Factor &ndash; 0 to 5 points.&nbsp;</p>
+
+<p style="margin-left: 80px !important;"><span style="color: #ff3232;">0 &ndash;</span> if INR10,000/- &amp; more is invested in building the project</p>
+
+<p style="margin-left: 80px !important;"><span style="color: #ff3232;">1 &ndash;</span> if INR 8,000/- &ndash; INR 9,999/- is invested in building the project</p>
+
+<p style="margin-left: 80px !important;"><span style="color: #ff3232;">2 &ndash;</span> If INR 6,000/- - INR 7,999/- is invested in building the project</p>
+
+<p style="margin-left: 80px !important;"><span style="color: #ff3232;">3 -</span> If INR 4,000/- - INR 5,999/- is invested in building the project</p>
+
+<p style="margin-left: 80px !important;"><span style="color: #ff3232;">4 -</span> If INR 2,000/- - INR 3,999/- is invested in building the project</p>
+
+<p style="margin-left: 80px !important;"><span style="color: #ff3232;">5 -</span> If INR 1/- - INR 1,999/- is invested in building the project</p>
+
+<p style="margin-left: 80px !important;"><span style="color: #ff3232;"><strong>NO POINTS</strong> &ndash;</span> for Computer-based (Software) Theme Projects in this category. (Software projects are judged by remaining criteria&rsquo;s)&nbsp;</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">III.</span> Successful entries to the finals will be announced through email, contact number given in the online form.</p>
+
+<p style="margin-left: 20px !important;"><span style="color: #ff3232;">6.3</span> Final Stage: Evaluation based on presentation and demonstration</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">I.</span> All finalists will make an exhibition and demonstration of their project on the competition day.</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">II.</span> There will be a judging session. Projects will be evaluated by the judges&rsquo; panel based on presentation and demonstration on their projects.</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">III.</span> During the presentation and demonstration of the project:</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">a.</span> Participants will be provided with a table and chairs to exhibit and demonstrate their project.</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">b.</span> Participants are given a time of 5 minutes to present and demonstrate their projects to the judges&rsquo; panel.</p>
+
+<p style="margin-left: 40px !important;"><span style="color: #ff3232;">IV.</span> Evaluation will be made based on the following criteria:</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">a.</span> Level of originality, creativity and innovative projects.</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">b.</span> Level of usability and application projects.</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">c.</span> Level of engineering concept.</p>
+
+<p style="margin-left: 60px !important;"><span style="color: #ff3232;">d.</span> Presentation</p>
+                            
+                        </p>
+                        <br/>
+                        <br/>
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">7.0 Steps to Register:</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;">
+                            <ol style="margin-left: 20px;">
+                                <li><span style="color: rgb(0, 0, 0) ;">Register your team (1-5 people/team) through the online link given below, (or) through our Event Organizers (contact numbers are given below), (or) through your Class Representative (if we have come to your college). (Registration Link is given below)</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Fill the online form with the UID (Unique Identity Number) given by our team after registration. (Those who pay through online, will get online-form + UID within 24 hours after online registration to their respective emails)</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">A Team can start working on their Idea with a working prototype from the date of Registration itself.&nbsp;</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Teams can submit their work on or before 20th of March, 2019 by midnight in the format mentioned below in &ldquo;Submission Format.&rdquo;</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Top 40 Results will be announced on or before the 2nd of April, 2019.</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Selected top 40 teams will get a chance to display their work to industry experts, VIP&rsquo;s, Professors and eminent people and might get a chance to work along with any of them.</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Certificates will be provided for every team who successfully submit their work on or before 20th of MARCH, 2019. (Certificate of Recognition for each team member)</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Certificates will be provided for every team who get shortlisted in top 100 projects and will be sent on or after the result day announcement, i.e; 2nd of April, 2019 or before. (Certificate Of Appreciation)</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Certificate of Excellence is given to top 40 teams who get shortlisted for the final exhibition round.</span></li>
+                            </ol>
+                            <br/>
+                            
+                            <p style="margin-left: 15px;"><span style="color: rgb(0, 0, 0) ;"><strong>Registration must have complied with the following procedures:</strong></span></p>
+                            
+                            <ol style="margin-left: 20px;">
+                                <li><span style="color: rgb(0, 0, 0) ;">All registration must be made through online-form given by Organizing Team</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">All items contained in the online registration form must be filled in completely</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Video must be uploaded to YouTube (unlisted) and paste the URL in the Article</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">You are required to register a Gmail account in order to access to the online form.</span></li>
+                                <li><span style="color: rgb(0, 0, 0) ;">Organizer reserves the right to reject any entries that are incomplete, late and doesn&rsquo;t meet event Requirements with or without informing the team if necessarily needed.&nbsp;</span></li>
+                            </ol>
+                            
+                        </p>
+                        <br/>
+                        <br/>
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">8.0 Registration Fee:</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;"><span style="color: rgb(0, 0, 0) ;">&nbsp; &nbsp; &nbsp; &nbsp; <strong>INR 500/- per team.</strong> Each team can have 1-5 members.</span></p>
+                        <br/>
+                        <button class="button" style="margin: 0 20% 0 20%; text-transform: uppercase; text-decoration: solid; font-weight: bold;" type="button" onclick="window.open('https://www.instamojo.com/@Quesite/l987a6e4f4b0a4214a24d1c315d24e5ab/')">IC2019 Payment Link</button>
+                        <br/>
+                        <br/>
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">9.0 Resources to Get Help:</h1>
+                        <br>
+                        
+                        <ol style="margin-left: 20px;">
+                            <li><span style="color: rgb(0, 0, 0) ;">Try to get access to the IEEE magazine- Spectrum. Become an IEEE member. <a href="http://spectrum.ieee.org/">http://spectrum.ieee.org/</a></span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;">If you want to build something cool <a href="http://www.instructables.com/ is">http://www.instructables.com/&nbsp;is</a> one of the best websites.</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;">Once you actually start doing something, <a href="http://stackoverflow.com/ will">http://stackoverflow.com/&nbsp;will</a> become your best friend.&nbsp;</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;">You can find some interesting stuff here as well <a href="http://makezine.com/ ">http://makezine.com/&nbsp;</a>&nbsp;</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;"><a href="https://hackaday.io/ Again">https://hackaday.io/&nbsp;Again</a> for some cool projects&nbsp;</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;"><a href="https://www.edx.org/ ,">https://www.edx.org/&nbsp;,</a>&nbsp;<br><a href="https://www.coursera.org/ ">https://www.coursera.org/&nbsp;</a> ,<a href="http://www.tutorialspoint.com/ You">http://www.tutorialspoint.com/&nbsp;You</a> can learn something new depending on your interest and gain a certificate in case of a university course.&nbsp;</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;">Electronics Lovers ~ Technology We Love has a lot of electronics embedded projects - <a href="http://www.electronicslovers.com/">http://www.electronicslovers.com/</a></span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;"><a href="https://www.sparkfun.com/ and http://www.arduino.cc/ This">https://www.sparkfun.com/ and http://www.arduino.cc/&nbsp;This</a> helps you with projects, components and a help forum.</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;"><a href="http://www.circuitstoday.com/ ">http://www.circuitstoday.com/&nbsp;</a></span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;"><a href="http://www.mathworks.in">http://www.mathworks.in</a> This will be of great help once you start working on MATLAB. The help forum is also quite good. It also has many libraries and code examples.&nbsp;</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;"><a href="http://www.engineersgarage.com/ has">http://www.engineersgarage.com/&nbsp;has</a> a lot of electronics embedded projects</span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;">Wonderful Resources have given in this Website - <a href="https://www.stemvillage.com/blog/top-6-engineering-education-resources">https://www.stemvillage.com/blog/top-6-engineering-education-resources</a></span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;">For STEM projects Resources - <a href="http://www.sciencekids.co.nz/engineering.html">Engineering Ideas</a></span></li>
+                            <li><span style="color: rgb(0, 0, 0) ;">7 Different DIY Websites - <a href="https://www.goodnet.org/articles/7-top-diy-websites-that-will-inspire-your-next-creation-list">DIY Websites CLick Here</a></span></li>
+                        </ol>
+                        
+                        <p><span style="color: rgb(0, 0, 0) ;">Try your own resources to search and build a project. Make sure to get the project done as per the guidelines we have mentioned. All the very best for search &nbsp;</span></p>
+                        <br/>
+                        <br/>
+
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">10.0 Submission Format:</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;"><span style="color: rgb(0, 0, 0) ;">Submission format will be sent to all the registered teams to their respective emails clearly explaining the step-by-step simple process.</p>
+                        <br/>
+                        <br/>
+
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">11.0 Prizes.</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;"><strong>Winners will receive recognition as follows:</strong></p>
+
+<ol style="margin-left: 20px;">
+	<li><span style="color: #f72323;" style="margin-left: 20px !important;">Champions&rsquo; Trophy &ndash;</span> Top 3 from the whole event + medals, prize money &amp; certificates <strong><ol><li style="margin-left: 40px !important;">1st Prize &ndash; INR 1,00,000/-*</li><li style="margin-left: 40px !important;">2nd Prize &ndash; INR 50,000/-*</li><li style="margin-left: 40px !important;">3rd Prize &ndash; INR 25,000/-*</li></ol></strong></li>
+</ol>
+
+<p style="margin-left: 15px;"><span style="color: #f72323;">* -</span> T&amp;C apply as per the Government Rules and Organizing Team Regulations and 0052esources.</p>
+
+<p style="margin-left: 15px;"><span style="color: #f72323;">2.</span> Theme Trophy- Top 3 from that particular theme + Trophy, medals &amp; certificates</p>
+<br/>
+
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">12.0 EVENT DATES &amp; VENUE.</h1>
+                        <br>
+                        
+                        <ul style="margin-left: 15px;">
+                            <li><span style="color: rgb(0, 0, 0);">Last Date to register: <strong>08-03-2019</strong></span></li>
+                            <li><span style="color: rgb(0, 0, 0);">Last Date to submit the project online: <strong>21-03-2019</strong></span></li>
+                            <li><span style="color: rgb(0, 0, 0);">The announcement of top 40 performers: <strong>31-03-2019</strong></span></li>
+                            <li><span style="color: rgb(0, 0, 0);">Final Event: <strong>07-04-2019&nbsp;</strong>(Final event is offline, people who get selected are invited to the event to present their work, remaining all is online format)<strong>&nbsp;</strong></span></li>
+                        </ul>
+                        
+                        <p><span style="color: rgb(0, 0, 0);">&nbsp;<br></span></p>
+                        
+                        <p style="margin-left: 15px;"><span style="color: rgb(0, 0, 0);"><strong>Venue:</strong> PGRRCDE, OU Campus, Hyderabad, TS - 500007.</span></p>
+                        
+                        <br/>
+                        <br/>
+
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">13.0 CONTACT US for MORE INFORMATION.</h1>
+                        <br>
+                        
+                        <p style="margin-left: 15px;"><span style="color: rgb(0, 0, 0);">FOR REGISTRATIONS AND QUERIES FEEL FREE TO REACH US AT</span><strong><span style="color: rgb(0, 0, 0);">&nbsp; +91 83418 54464, +91 94947 29306, +91 89195 30321</span></strong></p>
+
+<p style="margin-left: 20px;">
+	<br>
+</p>
+
+<p style="margin-left: 15px;"><strong><span style="color: rgb(0, 0, 0);"><img src="https://www.goeventz.com/uplode/mailfiles/1549573185.jpg" style="width: 898px; height: 1269.17px;" class="fr-fic fr-dib"></span></strong>
+	<br>
+</p>
+                        
+                        <br/>
+                        <br/>
+                    </div>
+                        
+                    <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Contact Us</h1>
+                    <p style="text-align:center; color:#f72323;">
+                        <STRONG>*</STRONG>WE WELCOME YOUNG &amp; DYNAMIC LEADERS TO JOIN THE EVENT
+                        <STRONG>*</STRONG>
+                        <br/>
+                        <button class="button" style="margin: 0 20% 0 20%; text-transform: uppercase; text-decoration: solid; font-weight: bold;" type="button" onclick="window.open('https://www.instamojo.com/@Quesite/l987a6e4f4b0a4214a24d1c315d24e5ab/')">IC2019 Payment Link</button>
+
+                    </p>
+                    <br/>
+                    <div class="content-wrapper">
+                        <div class="one_half ">
+                            <p>You can post your interest and can directly contact us through email as well for any further information at "innovatorschallenge@imbuedesk.com".</p>
+                            <br>
+                            <p><strong><span style="color: #e64b77;">Membership Details</span></strong> email us at "membership@imbuedesk.com".</p>
+                        </div>
+                        <div class="one_half last">
+                            <form name="contactform" method="post" action="send_form_email.php">
+                                <div class="contact-form">
+                                    <label for="first_name">Name *</label>
+                                    <p><input id="name" type="text" name="first_name" placeholder="Name"></p>
+                                    <label for="email">Email Address *</label>
+                                    <p><input id="contact-email" type="email" name="email" placeholder="Email"></p>
+                                    <label for="telephone">Contact Number *</label>
+                                    <p><input type="text" name="telephone" placeholder="Contact Number"></p>
+                                    <label for="subject">Subject</label>
+                                    <p><input id="subject" type="text" name="subject" placeholder="Subject"></p>
+                                    <label for="comments">Message *</label>
+                                    <p><textarea id="message" name="comments" placeholder="Message"></textarea></p>
+                                    <p><input type="submit" value="Submit" onClick="SendMail()"></p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                <!-- Footer -->
+                <footer>
+                    <div class="footer content-1170 center-relative">
+                        <ul>
+                            <li class="copyright-footer">
+                                ©2018-19 All rights reserved. | ImbueDesk ENS Pvt. Ltd.
+                                <a href="www.imbuedesk.com" target="_blank">ImbueDesk</a>
+                            </li>
+                            <li class="social-footer">
+                                <a href="https://in.linkedin.com/company/imbuedesk" target="_blank">
+                                    <span class="fa fa-linkedin"></span>
+                                </a>
+                                <a href="https://twitter.com/imbuedesktweets" target="_blank">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a href="https://plus.google.com/+ImbueDesk" target="_blank">
+                                    <span class="fa fa-google"></span>
+                                </a>
+                                <a href="https://www.facebook.com/imbuedesk/" target="_blank">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                                <a href="https://picasso999.blogspot.in" target="_blank">
+                                    <span class="fa fa-rss"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+    </article>
+
+
+
+
+    <!--Load JavaScript-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type='text/javascript' src='js/jquery.sticky-kit.min.js'></script>
+    <script type='text/javascript' src='js/jquery.smartmenus.min.js'></script>
+    <script type='text/javascript' src='js/jquery.sticky.js'></script>
+    <script type='text/javascript' src='js/jquery.dryMenu.js'></script>
+    <script type='text/javascript' src='js/isotope.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.carouFredSel-6.2.0-packed.js'></script>
+    <script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+    <script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
+    <script type='text/javascript' src='js/main.js'></script>
+</body>
+
+</html>

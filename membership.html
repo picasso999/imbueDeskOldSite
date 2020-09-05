@@ -1,0 +1,859 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>ImbueDesk</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="ImbueDesk" />
+    <meta name="keywords" content="Career, student, development, startup, India, education, college, university" />
+    <meta name="author" content="Puranam Pradeep Picasso" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="demo-images/logo.png" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i,900|Montserrat:400,700|PT+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href='css/clear.css' />
+    <link rel="stylesheet" type="text/css" href='css/common.css' />
+    <link rel="stylesheet" type="text/css" href='css/font-awesome.min.css' />
+    <link rel="stylesheet" type="text/css" href='css/carouFredSel.css' />
+    <link rel="stylesheet" type="text/css" href='css/prettyPhoto.css' />
+    <link rel="stylesheet" type="text/css" href='css/sm-clean.css' />
+    <link rel="stylesheet" type="text/css" href='style1.css' />
+
+    <!--[if lt IE 9]>
+                <script src="js/html5.js"></script>
+        <![endif]-->
+
+    <style>
+        input {
+            border: 2px solid rgb(180, 34, 34);
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            /* position: relative;
+        display: block;*/
+            text-align: center;
+            font-size: 2em;
+            *height: 1.5em;
+            line-height: 1.5em;
+            padding: 0.29em 0;
+            margin: 0 0 0.5em;
+            width: 80%;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script>
+        (function($) {
+            jQuery.expr[':'].Contains = function(a, i, m) {
+                return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+            };
+
+            function listFilter(header, list) {
+                var form = $("<form>").attr({
+                        "class": "filterform",
+                        "action": "#"
+                    }),
+                    input = $("<input>").attr({
+                        "class": "filterinput",
+                        "type": "text"
+                    });
+                $(form).append(input).appendTo(header);
+
+                $(input)
+                    .change(function() {
+                        var filter = $(this).val();
+                        if (filter) {
+                            $(list).find(".movieTitle:not(:Contains(" + filter + "))").parent().slideUp();
+                            $(list).find(".movieTitle:Contains(" + filter + ")").parent().slideDown();
+                        } else {
+                            $(list).find(".entry").slideDown();
+                        }
+                        return false;
+                    })
+                    .keyup(function() {
+                        $(this).change();
+                    });
+            }
+
+            $(function() {
+                listFilter($("#header"), $("#list"));
+            });
+        }(jQuery));
+    </script>
+
+    <style>
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            width: o;
+            transition: all 0.5s;
+            vertical-align: middle;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+
+</head>
+
+<body class="single-portfolio">
+
+    <!-- Preloader Gif -->
+    <!-- <table class="doc-loader">
+        <tr>
+            <td>
+                <img src="demo-images/logo.png" alt="Loading..." />
+            </td>
+        </tr>
+    </table> -->
+
+    <!-- Menu -->
+    <div class="menu-wrapper center-relative">
+        <nav id="header-main-menu">
+            <div class="mob-menu">MENU</div>
+            <ul class="main-menu sm sm-clean">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Mastery</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#news">Blog</a>
+                </li>
+                <li>
+                    <a href="#video">Video</a>
+                </li>
+                <li>
+                    <a href="#skills">Success</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <article id="portfolio-1" class="section portfolio">
+        <div class="center-relative content-1170">
+            <div class="entry-content" id="wrap">
+
+                <div class="content-wrap relative" id="list">
+                    <a class="absolute x-close" href="index.html#portfolio">
+                        <img src="images/icon_x.svg" alt="Close">
+                    </a>
+
+                    <div class="one margin-0">
+                        <img src="images/IDMembership.jpg" alt="">
+                    </div>
+                    <!-- <div class="clear"></div> -->
+                    <!-- <div class="one_half margin-0">
+                            <img src="demo-images/item_img_02.jpg" alt="">
+                        </div>
+                        <div class="one_half text-right margin-0">
+                            <img src="demo-images/item_img_03.jpg" alt="">
+                        </div>
+                        <div class="clear"></div> -->
+
+                    <div class="section-content-holder" style="position:relative">
+                        <!-- <div class="content-wrapper"> -->
+                        <div class="content-title-holder">
+                            <p class="content-title">MEMBERSHIPS</p>
+                        </div>
+
+
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="one section-content-holder text-center">
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">FREE "Project Based Experience Letter + Certificate"<strong>(PBELC)</strong></h1>
+                        <button class="button" style="margin: 0 40% 0 40%; text-transform: uppercase; text-decoration: solid; font-weight: bold;" type="button" onclick="window.open('https://pmny.in/1I8j7QjJi5gA')">Pay Lifetime Membership Fee</button>
+                        <br>
+                        <p>
+                            <strong>Imbuedesk ENS Pvt. Ltd., ISO 9001:2015, MSME Registered</strong> company Works on products & services related to Latest Technologies.
+                            <br> <br> We are Offering <strong>2 Free PBELC</strong> to anyone who has got passion to <strong>Learn &amp; Implement.</strong>
+                            <br> <br> This is open for <strong>Students, Freshers, Professionals &amp; House Wives/Husbands</strong> related to <strong>Arts/ Science/ Technology/ Management</strong> background.
+                            <br> <br> We welcome you all to be part of our <strong>Wonderful platform</strong> to explore <strong>Possibilities</strong> beyond <strong>Awesomeness</strong> alltogether.
+                            <br> <br> We are looking forward to work with <strong>FUTURE LEADERS &amp; DYNAMIC PROFESSIONALS</strong>. Thank you.</p>
+
+                        <br/>
+                        <!-- <p><strong>Members</strong> are trained on the latest technologies related to their passion from basics to advance and give them opportunity to work on <strong>real-time live projects</strong> for their <strong>Career Growth and Success</strong>.</p> -->
+                        <br/>
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">STEPS To Get PBELC</h1>
+                        <br>
+                        <p><strong>Follow</strong> step-by-step procedure as mentioned below to get <strong>Project Based Experience Letter + Certificate (PBELC).</strong> Get trained on the latest technologies related to your passion from basics to advance
+                            and give yourself an opportunity to work on real-time live projects @<strong><a href="http://www.imbuedesk.com/projects.html" target="_blank">ImbueDesk Projects (Click Here)</a> </strong> for your overall <strong>Career Growth and Success</strong>.</p>
+                        <br>
+                        <p>
+                            <span style="color: #ff3232;">Step-1:</span> If you are already an ID(ImbueDesk) Member, you can skip to step-2. If you are here for 1st time, we request you to fill your details in the form given below <br>
+                            <button class="button" onclick="window.open('https://goo.gl/52S9jJ')" type="button"><span>JOINING FORM</span></button>
+                            <br/>
+                            <span style="color: #ff3232;">Step-2:</span> Create your own free-blog using blogger.com , wordpress.con, Tumblr or any of your own interested blog. You need to create an article (of your project) and send us link in the format
+                            we will mention in coming up steps to get PBELC.
+                            <br>
+                            <br> How to Create Blog for Free (Example) - <a href="https://www.youtube.com/watch?v=eky_ScK4uPU" target="_blank">Click Here</a>.
+                            <br/>
+                            <br>
+                            <span style="color: #ff3232;">Step-3:</span> create an article in your personalized blog with Article heading as project Name you have worked on, and go to next Step.
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-4:</span> Write 100-300 words in paragraphs explaining what all technologies you have used, how much time it took, what you have learned, who worked with you and what you want to do in the
+                            future with the knowledge gained and any other important information which you think is apt to add. Thank Imbuedesk team in the end paragraph by mentioned "ImbueDesk" name and add your UID (this is only for members, non-members
+                            can ignore this). (this step helps you in improving your writing skills and communication through text)
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-5:</span> Add 'SlideShare' (minimum 4- maximum 10 slides) explaining about your project in brief. (this helps you improve your presentationqal skills).
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-6:</span> Add Photos/Screenshots of your software or product or work you have worked on and keep them after the content + PPT link is written.
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-7:</span> (This is not mandatory but very useful if done, adds up quality to your article and work) You can record 1 min - 1.30 mins video explaining about your product, service, program or
+                            work in detail by showing your product or work and giving voice over explaining about the time taken, people involved, what steps you have worked on (if you are new to video recording, don't worry! just speak out what you have
+                            mentioned in your PPT but in less than 1 min or 2.) (This helps in improving your communication + confidence in giving presentations)
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-8:</span> Attach .zip or .rar file link of your project. (This is applicable for those who worked on software based project, they can just wrap their source-code in a zip file and share using
+                            Gdrive or Dropbox or any cloud based network). (Non-software guys can ignore this step).
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-9:</span> If any ackowledgement from other companies or people or testimonicals or emails you have recieved in appreciation of your work, you can mention them in the article clearly. (This
+                            adds up proof of work for your project).
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-10:</span> Publish your article and keep it in Public view. Share the article link with us for confirming your work from us.
+
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Step-11:</span> Fill the form given below for submitting your project
+                            <br>
+                            <button class="button" onclick="window.open('https://goo.gl/forms/Kg1iK1WAmIZZF3DQ2')" type="button"><span>PROJECT SUBMISSION FORM</span></button>
+
+                            <br/>
+                            <span style="color: #ff3232;">Step-12:</span> <br/> Within 24 hours - 72 hours, our team will verify your work andd we will send Work experience Letter Based on your Project Link to your email-id mentioned by you during the
+                            form filling.
+                            <br/>
+                            <br/>
+                            <span style="color: #ff3232;">Key Notes:</span> For the very first time, the process might seem little lengthy but from 2nd and 3rd project onwards, it gets very simple. The <strong>Biggest Advantage</strong> that this process
+                            provides is, you will not just learn to build a product/service or project but also learn the key skills needed to communicate your work to outside world. We have seen people building up <strong>Confidence, Communication Skills, Proof-of-work</strong>                            and lot other advantages through this process.
+                            <br/>
+                            <br/> Your work gets saved online forever (unless, you re-edit it) and our <strong>Project Based Experience Letter + Certificate (PBELC)</strong> can be <strong>verified 24/7, 365 days</strong> around the globe by anyone and
+                            verify, validate your work. We sstand as a proof of appreciating the work done by you.
+                            <br/>
+                            <br/> We hearty Appreciate anyone who joins us and lead their life to <strong>Career Success.</strong>
+                        </p>
+                        <br/>
+                        <br/>
+                    </div>
+
+                    <div class="one section-content-holder text-center">
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Join Lifetime Membership <strong>ASAP!</strong></h1>
+                        <br>
+                        <button class="button" style="margin: 0 40% 0 40%; text-transform: uppercase; text-decoration: solid; font-weight: bold;" type="button" onclick="window.open('https://pmny.in/1I8j7QjJi5gA')">Pay Lifetime Membership Fee</button>
+                        <br>
+                        <br>
+                        <p><strong>Send</strong> screenshot of your payment to WhatsApp Number - (91)898-575-2891, also mention your name in the Message. Get <strong>UID (Unique IDentity Number) from ImbueDesk team + Memebership Certificate in 24 hours.</strong>                            Get trained on the latest technologies related to your passion from basics to advance and give yourself an opportunity to work on real-time live projects @<strong><a href="http://www.imbuedesk.com/projects.html" target="_blank">ImbueDesk Projects (Click Here)</a> </strong>                            for your overall <strong>Career Growth and Success</strong>. https://www.lifehack.org/articles/money/25-killer-sites-for-free-online-education.html
+                        </p>
+                    </div>
+                    <br/>
+                    <br/>
+
+                    <div class="one section-content-holder text-center">
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">FREE Resources to Learn &amp; Implement</h1>
+                        <br>
+                        <button class="button" style="margin: 0 40% 0 40%; text-transform: uppercase; text-decoration: solid; font-weight: bold;" type="button" onclick="window.open('https://pmny.in/1I8j7QjJi5gA')">Pay Lifetime Membership Fee</button>
+                        <br>
+                        <br>
+                        <p><strong>Arts, Science, Technology &amp; Management</strong> related resources to learn and work on them, we believe in Learning from small chunks to complete in-depth knowledge.
+                            <br/>
+                            <br/> Its always best to start off with small courses which can be finished in 1-6 days time (or) 1 hour - 12 hours. They can be learnt quick, implemented and gain experience in the same area.
+                            <br/>
+                            <br/> Also we will know if this stream is suitable for you or not within a day or a week, instead of <strong>spending TIME + MONEY + ENERGY</strong> and then knowing that this stream really doesn't suit your or maybe what you
+                            thought and what it exactly is, are completely different things.
+                            <br/>
+                            <br/> Get trained on the latest technologies related to your passion from basics to advance and give yourself an opportunity to work on real-time live projects @<strong><a href="http://www.imbuedesk.com/projects.html" target="_blank">ImbueDesk Projects (Click Here)</a> </strong>                            for your overall <strong>Career Growth and Success</strong>.
+                        </p>
+                    </div>
+
+
+                    <div class="one_half text-right ">
+                        <h1 style="color: #014781;">Search for Resources</h1>
+                    </div>
+
+                    <div class="one_half last">
+                        <div id="header">
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="clear"></div>
+
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">1. Most Useful Resources to Learn + Implement</h1>
+                                <p> 25 Killer Sites For Free Online Education and also implementing things for free sitting at home, DIY (Do It Yourself) projects to work and <strong>hands-on experience</strong>
+                                </p>
+                                <br/>
+
+                            </div>
+                            <div class="one_half last ">
+                                <p>
+                                    <span style="color: #ff3232;">25 Online Education Courses:</span> <a href="https://www.lifehack.org/articles/money/25-killer-sites-for-free-online-education.html" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">DIY & Projects To Work-On: </span> <a href="https://www.instructables.com/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">7 Different DIY Websites</span> <a href="https://www.goodnet.org/articles/7-top-diy-websites-that-will-inspire-your-next-creation-list" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">7 Different DIY Websites</span> <a href="https://www.goodnet.org/articles/7-top-diy-websites-that-will-inspire-your-next-creation-list" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">For Research and Writing Articles</span> <a href="https://www.scoop.it/" target="_blank">Scoop.it (Click Here)</a> is very famous and has tons of resources related to 1000's of topics from
+                                    Arts, Science, Technology, History, Business and much more
+                                    <br/>
+                                    <br/>
+                                    <a href="https://www.reddit.com/" target="_blank">Reddit (Click Here)</a> is also very useful and has tons of resources related to 1000's of topics from Arts, Science, Technology, History, Business and much more. You
+                                    can do your research for creative stuff in the 2 websites I have mentioned.
+                                    <br/>
+                                    <br/>
+                                    <a href="https://www.pinterest.co.uk" target="_blank">Pinterest (Click Here)</a> is useful for following Picture related search and find articles + useful pictures + Inforgrpahics related to them, using the 3 links
+                                    given here, you can create your own articles in quick way possible and can gain lot of knowledge through all of these.
+                                    <br/>
+                                    <span style="color: #ff3232;">For Networking</span> <a href="https://www.linkedin.com/" target="_blank">Linkedin (Click Here)</a> is most essential platform to gain connections with like-minded and with professionals
+                                    in your passionate area. Big platform for building Professional profile and connections. Always make sure to have a Professional photo as profile picture and make sure to completely fill the details about yourself to
+                                    get maximum benefit from the site.
+                                    <br/>
+                                    <span style="color: #ff3232;">Best YouTube Channels</span> <a href="https://www.bestyoutubechannels.info/" target="_blank">Best In Every Topic (Click Here)</a> List of top channels in each category are clearly mentioned
+                                    here and can be accessed at ease.
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">2. Best data science youtube channels</h1>
+                                <p>Get experience by working on datasets, chatbots, Nerual networks, NLP based projects or any other projects.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">Top 10 Machine Learning Youtube Channels To Follow:</span> <a href="https://blog.feedspot.com/machine_learning_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 10 Data Science Videos on Youtube:</span> <a href="https://www.kdnuggets.com/2016/10/top-10-data-science-videos-youtube.html" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 10 Artificial Intelligence Youtube Channels for AI Enthusiast:</span> <a href="https://blog.feedspot.com/ai_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">3. best youtube channel to learn IoT (Internet Of Things)</h1>
+                                <p>Can work on home-automation projects, or smart city projects or inter connecting multiple sensors through Internet or smart waste management or controlling IoT based devices through cloud or any better projects you can
+                                    come up with.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">Top 15 Internet of Things YouTube Channels with Global IoT News and Expert Opinions on the IoT Industry:</span> <a href="https://blog.feedspot.com/iot_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">16 IoT youtube channels for serious IoT hobbyists:</span> <a href="https://uday.tech/learning-iot-on-youtube/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">The 7 Best (Industrial) IIOT Podcast and YouTube Channels:</span> <a href="https://www.presenso.com/blog/best-IIOT-podcast-and-youTube-channels" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">4. Best youtube channel to learn design</h1>
+                                <p>Its most important to learn Photoshop + Illustrator + after Effects as most basics in graphic design. people can present their work and get experience for the same and also chance to work with us as freelancers too.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">The Best Channels to Learn Design on YouTube:</span> <a href="https://wefunction.com/best-channels-to-learn-design-on-youtube/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">10 Amazing YouTube Channels to Boost Your Graphic Design Skills:</span> <a href="https://creativemarket.com/blog/youtube-channels-graphic-design" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 75 Graphic Design Youtube Channels For Graphic Designers:</span> <a href="https://blog.feedspot.com/graphic_design_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">5. Best youtube channel to learn engineering</h1>
+                                <p>Lot of things to learn from basics and work on resarch based or creative based or innovative products + services for Mechanical, Civil, Electrical, Electronics, Computer Science, Information Technology, Aeronautical or
+                                    any other egineering branch
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">10 Best Engineering YouTube Channels:</span> <a href="https://interestingengineering.com/10-best-engineering-youtube-channels" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">6 Awesome YouTube Channels Every Engineer Should Follow:</span> <a href="https://newengineer.com/insight/6-awesome-youtube-channels-every-engineer-should-follow-1072977" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Learning Civil Engineering on Youtube:</span> <a href="https://www.civilscholar.com/2017/07/10-best-youtube-channels-for-civil-engineers-2017.html" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 10 Electronics Youtube Channels for Electrical & Electronic Engineers:</span> <a href="https://www.lifewire.com/youtube-channels-for-3d-artists-2128" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">YouTube Channels for 3D Artists and Game Developers:</span> <a href="https://www.civilscholar.com/2017/07/10-best-youtube-channels-for-civil-engineers-2017.html" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">5 top Blender video tutorials for beginners:</span> <a href="https://opensource.com/article/18/4/5-best-blender-video-tutorials-beginners" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">6. Augmented Reality (AR) and Virtual Reality (VR)</h1>
+                                <p>Create real time uses, simulations, 3D models, Games, interactive Learning pltforms, development platforms or any better projects and submit it to us to get Experience Based Certificate for each project you complete.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">Top 50 Augmented Reality Youtube Channels To Follow:</span> <a href="https://blog.feedspot.com/augmented_reality_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 100 Virtual Reality Youtube Channels For Virtual Reality Enthusiasts:</span> <a href="https://blog.feedspot.com/virtual_reality_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 45 VR Sites, Blogs and Youtube Channels:</span> <a href="https://virtualrealitypop.com/top-45-vr-sites-blogs-medium-authors-and-youtube-channels-to-follow-75183c038a9?gi=261e1ed5847e"
+                                        target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">7. Best youtube channel to Game Design &amp; Development</h1>
+                                <p>Start with creating small games like snake, titris, mario, dave, flappy birds and then start building more complex ones like 2D game,s 3D games, RPG Games, Online live Games, Games using AR, VR and MR or even better. Submit
+                                    your work to us and get experience based Certificate for your each project officially.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">Best YouTube Channels for Game Development &amp; Coding:</span> <a href="https://www.catalystmints.com/gaming-news/120-best-youtube-channels-for-game-development-coding" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">10 Top YouTube Channels for Game Development Tutorials in 2018!:</span> <a href="https://www.template.net/tutorials/game-development-youtube-tutorial/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">The 12 Most Helpful Youtube Channels For Game Designing
+                                        :</span> <a href="https://www.gamedesigning.org/gaming/helpful-youtube-channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">8. Best youtube channel to Learn App Development</h1>
+                                <p>Start with basics in HTML, CSS, JavaScript and start learning full stack development, start creating responsive, interactive Apps (mobile + Web). Learn cross-site-scripting and work on creating Hybrid apps for web &amp;
+                                    mobile based platforms. Submit your work to get experience Certificate for each product done.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">10 Best App Developement YouTube Channels:</span> <a href="https://www.plesk.com/blog/tips-easy-reading/best-web-development-youtube-channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">The best Web Development YouTube Channels:</span> <a href="https://www.thebalancecareers.com/the-10-best-web-development-youtube-channels-2071397" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">26 YOUTUBE CHANNELS TO BOOST YOUR WEB DEVELOPMENT CAREER:</span> <a href="https://optimizerwp.com/web-development-tutorial-youtube/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">17 Best YouTube Channels To Learn Web Development:</span> <a href="https://techlog360.com/best-youtube-channels-learn-web-development/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">9. Best youtube channel to learn Cyber Security 7amp; Ethical Hacking</h1>
+                                <p>Learn from basics, learn Big-bounty hunting, learn penetration testing in mobile apps and web based platforms, submit bugs and earn a lot. Join us today to become a freelance Ethical Hacker.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">Top 10 Cyber Security Youtube Channels for IT Professionals:</span> <a href="https://blog.feedspot.com/cyber_security_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 25 Ethical Hacking Youtube Channels for Security Professionals:</span> <a href="https://blog.feedspot.com/ethical_hacking_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">10. Best youtube channel to Learn Digital Marketing</h1>
+                                <p>Learn and optimize digital presence and understand various integrations tools used in online, email, social media marketing, wnehacing your website/blog and earning through them. Understand key concepts of SEO Optimization
+                                    and content Writing preference according to Search Engine Optimization. Work on your own blog or become a freelancer and help other companies/startups or individuals in establishing themselves in digital world. Produce
+                                    us the step-by=step growth steps taken in establishing a successful digital campign and earn Project based Expeirnece Certificate from us.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">10 Best Youtube Channels to learn Digital Marketing for free:</span> <a href="https://www.whizsky.com/2018/05/10-best-youtube-channels-to-learn-digital-marketing-for-free/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">20 Digital Marketing Youtube Channels You Should Subscribe To:</span> <a href="https://superb.digital/search-engine-optimisation/20-digital-marketing-youtube-channels-subscribe/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">TOP BLOGS & YOUTUBE CHANNELS FOR DIGITAL MARKETERS:</span> <a href="https://www.targetinternet.com/top-blogs-youtube-channels-for-digital-marketers/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">17 Must Watch Digital Marketing YouTube Channels:</span> <a href="https://hafizmuhammadali.com/blog/digital-marketing-youtube-channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">11. Best youtube channel to Learn Business Management + Development + Entrepreneurship</h1>
+                                <p>Start a business, learn Marketing, Branding, Selling, Presenting, Business Development, Operations, team work, Motivation intrinsic and extrinsic. Work on new models or existing models, share your experiences to us through
+                                    articles and get recognized for your works permanently by us.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">Top 20 Business Youtube Channels For Entrepreneurs:</span> <a href="https://blog.feedspot.com/business_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">The best 18 YouTube channels for entrepreneurs:</span> <a href="https://99designs.com/blog/business/youtube-for-entrepreneurs/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">20 Must Watch YouTube Channels That Will Change Your Business:</span> <a href="https://www.forbes.com/sites/markfidelman/2016/09/06/20-must-watch-youtube-channels-that-will-change-your-business/#60c993b518b0"
+                                        target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">15 Must Watch YouTube Channels for Entrepreneurs and Small Business Owners:</span> <a href="https://www.crowdspring.com/blog/youtube-channels-for-entrepreneur-small-business-success/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">12. Best youtube channel to Learn Finance &amp; Project Management</h1>
+                                <p>handle and understand finances in business, learn to read and creat anlytical predictive models for forex, crypto-currency, blockchain or business Intelligence models for your clients. Present us your work flow in a clear
+                                    article to get PBELC.. learn the whole Business cycle and work flow using techniques like Kanban, Agile, Lean, Six-sigma, PMI tools and process for completing a successful business process cycle from start to end.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">Top 10 Finance Youtube Channels for Finance Lovers
+                                        :</span> <a href="https://blog.feedspot.com/finance_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">20 Best YouTube Channels for Your Financial Future:</span> <a href="https://peerfinance101.com/best-youtube-channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 10 YouTube Channels for Project Management Videos:</span> <a href="https://project-management.com/top-10-youtube-channels-for-project-management-videos/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                            <div class="one_half text-right ">
+                                <h1 style="color: #014781;">13. Best youtube channel to Learn Robotics</h1>
+                                <p>Start with basics in HTML, CSS, JavaScript and start learning full stack development, start creating responsive, interactive Apps (mobile + Web). Learn cross-site-scripting and work on creating Hybrid apps for web &amp;
+                                    mobile based platforms. Submit your work to get experience Certificate for each product done.
+                                </p>
+                                <br/>
+
+                            </div>
+
+                            <div class="one_half last">
+                                <p>
+                                    <span style="color: #ff3232;">YouTube Channels To Learn Robotic Programming:</span> <a href="https://www.keepthetech.com/2016/12/youtube-channels-learn-robotic-programming.html" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">Top 10 Robotics Youtube Channels To Follow:</span> <a href="https://blog.feedspot.com/robotics_youtube_channels/" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">***Robotics Engineering***:</span> <a href="https://www.bestyoutubechannels.info/robotics_engineering.html" target="_blank">(Click Here)</a>
+                                    <br/>
+                                    <span style="color: #ff3232;">7 YouTube Channels to Learn Robotic Engineering and Programming:</span> <a href="https://www.hongkiat.com/blog/learn-electronics-robotics-youtube/" target="_blank">(Click Here)</a>
+                                    <br/>
+
+                                </p>
+                                <br/>
+                                <br/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+
+                    <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Contact To Work On Our Latest Projects</h1>
+                    <p style="text-align:center; color:#f72323;">
+                        <STRONG>*</STRONG>COMPANY CORE PROJECTS ARE OPEN FOR MEMBERS ONLY
+                        <STRONG>*</STRONG>
+                        <br/>
+                        <button class="button" style="margin: 0 40% 0 40%; text-transform: uppercase; text-decoration: solid; font-weight: bold;" type="button" onclick="window.open('https://pmny.in/1I8j7QjJi5gA')">Pay Lifetime Membership Fee</button>
+
+                    </p>
+                    <br/>
+                    <div class="content-wrapper">
+                        <div class="one_half ">
+                            <p>You can post your interest in which project here and can directly contact us through email as well for any further information at "projects@imbuedesk.com".</p>
+                            <br>
+                            <p><strong><span style="color: #e64b77;">Membership Details</span></strong> email us at "membership@imbuedesk.com".</p>
+                        </div>
+                        <div class="one_half last">
+                            <form name="contactform" method="post" action="send_form_email.php">
+                                <div class="contact-form">
+                                    <label for="first_name">Name *</label>
+                                    <p><input id="name" type="text" name="first_name" placeholder="Name"></p>
+                                    <label for="email">Email Address *</label>
+                                    <p><input id="contact-email" type="email" name="email" placeholder="Email"></p>
+                                    <label for="telephone">Contact Number *</label>
+                                    <p><input type="text" name="telephone" placeholder="Contact Number"></p>
+                                    <label for="subject">Subject</label>
+                                    <p><input id="subject" type="text" name="subject" placeholder="Subject"></p>
+                                    <label for="comments">Message *</label>
+                                    <p><textarea id="message" name="comments" placeholder="Message"></textarea></p>
+                                    <p><input type="submit" value="Submit" onClick="SendMail()"></p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                <!-- Footer -->
+                <footer>
+                    <div class="footer content-1170 center-relative">
+                        <ul>
+                            <li class="copyright-footer">
+                                ©2018-19 All rights reserved. | ImbueDesk ENS Pvt. Ltd.
+                                <a href="www.imbuedesk.com" target="_blank">ImbueDesk</a>
+                            </li>
+                            <li class="social-footer">
+                                <a href="https://in.linkedin.com/company/imbuedesk" target="_blank">
+                                    <span class="fa fa-linkedin"></span>
+                                </a>
+                                <a href="https://twitter.com/imbuedesktweets" target="_blank">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a href="https://plus.google.com/+ImbueDesk" target="_blank">
+                                    <span class="fa fa-google"></span>
+                                </a>
+                                <a href="https://www.facebook.com/imbuedesk/" target="_blank">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                                <a href="https://picasso999.blogspot.in" target="_blank">
+                                    <span class="fa fa-rss"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+    </article>
+
+
+
+
+    <!--Load JavaScript-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type='text/javascript' src='js/jquery.sticky-kit.min.js'></script>
+    <script type='text/javascript' src='js/jquery.smartmenus.min.js'></script>
+    <script type='text/javascript' src='js/jquery.sticky.js'></script>
+    <script type='text/javascript' src='js/jquery.dryMenu.js'></script>
+    <script type='text/javascript' src='js/isotope.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.carouFredSel-6.2.0-packed.js'></script>
+    <script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+    <script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
+    <script type='text/javascript' src='js/main.js'></script>
+</body>
+
+</html>

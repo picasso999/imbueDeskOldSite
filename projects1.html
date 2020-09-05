@@ -1,0 +1,1325 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>ImbueDesk</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="ImbueDesk" />
+    <meta name="keywords" content="Career, student, development, startup, India, education, college, university" />
+    <meta name="author" content="Puranam Pradeep Picasso" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="demo-images/logo.png" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i,900|Montserrat:400,700|PT+Serif' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" type="text/css" href='css/clear.css' />
+    <link rel="stylesheet" type="text/css" href='css/common.css' />
+    <link rel="stylesheet" type="text/css" href='css/font-awesome.min.css' />
+    <link rel="stylesheet" type="text/css" href='css/carouFredSel.css' />
+    <link rel="stylesheet" type="text/css" href='css/prettyPhoto.css' />
+    <link rel="stylesheet" type="text/css" href='css/sm-clean.css' />
+    <link rel="stylesheet" type="text/css" href='style.css' />
+
+    <!--[if lt IE 9]>
+                <script src="js/html5.js"></script>
+        <![endif]-->
+
+    <style>
+        input {
+            border: 2px solid rgb(180, 34, 34);
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            /* position: relative;
+        display: block;*/
+            text-align: center;
+            font-size: 2em;
+            *height: 1.5em;
+            line-height: 1.5em;
+            padding: 0.29em 0;
+            margin: 0 0 0.5em;
+            width: 80%;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script>
+        (function ($) {
+            jQuery.expr[':'].Contains = function (a, i, m) {
+                return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+            };
+
+            function listFilter(header, list) {
+                var form = $("<form>").attr({
+                        "class": "filterform",
+                        "action": "#"
+                    }),
+                    input = $("<input>").attr({
+                        "class": "filterinput",
+                        "type": "text"
+                    });
+                $(form).append(input).appendTo(header);
+
+                $(input)
+                    .change(function () {
+                        var filter = $(this).val();
+                        if (filter) {
+                            $(list).find(".movieTitle:not(:Contains(" + filter + "))").parent().slideUp();
+                            $(list).find(".movieTitle:Contains(" + filter + ")").parent().slideDown();
+                        } else {
+                            $(list).find(".entry").slideDown();
+                        }
+                        return false;
+                    })
+                    .keyup(function () {
+                        $(this).change();
+                    });
+            }
+
+            $(function () {
+                listFilter($("#header"), $("#list"));
+            });
+        }(jQuery));
+    </script>
+
+</head>
+
+<body class="single-portfolio">
+
+    <!-- Preloader Gif -->
+    <!-- <table class="doc-loader">
+        <tr>
+            <td>
+                <img src="demo-images/logo.png" alt="Loading..." />
+            </td>
+        </tr>
+    </table> -->
+
+    <!-- Menu -->
+    <div class="menu-wrapper center-relative">
+        <nav id="header-main-menu">
+            <div class="mob-menu">MENU</div>
+            <ul class="main-menu sm sm-clean">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Mastery</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#news">Blog</a>
+                </li>
+                <li>
+                    <a href="#video">Video</a>
+                </li>
+                <li>
+                    <a href="#skills">Success</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <article id="portfolio-1" class="section portfolio">
+        <div class="center-relative content-1170">
+            <div class="entry-content" id="wrap">
+
+                <div class="content-wrap relative" id="list">
+                    <a class="absolute x-close" href="index.html#portfolio">
+                        <img src="images/icon_x.svg" alt="Close">
+                    </a>
+
+                    <div class="one margin-0">
+                        <img src="images/home_banner.png" alt="">
+                    </div>
+                    <!-- <div class="clear"></div> -->
+                    <!-- <div class="one_half margin-0">
+                            <img src="demo-images/item_img_02.jpg" alt="">
+                        </div>
+                        <div class="one_half text-right margin-0">
+                            <img src="demo-images/item_img_03.jpg" alt="">
+                        </div>
+                        <div class="clear"></div> -->
+
+                    <div class="section-content-holder" style="position:relative">
+                        <!-- <div class="content-wrapper"> -->
+                        <div class="content-title-holder">
+                            <p class="content-title">PROJECTS'</p>
+                        </div>
+
+
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="one section-content-holder text-center">
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Disclaimer</h1>
+
+                        <p>
+                            <strong>Imbuedesk ENS Pvt. Ltd.</strong> Works on various projects and in various variants. We want our
+                            new members to know the different projects we are working on to make an impact in this world.
+                            We have given metrics and their desciption below for reference purpose. We are looking forward
+                            to work with FUTURE LEADERS &amp; FUTURE PROFESSIONALS. Thank you.</p>
+
+                        <br/>
+                        <p><strong>Members</strong> are trained on the latest technologies that they are really passionate about from basics to advance and give them opportunity to work on <strong>real-time live projects</strong> for their <strong>Career Growth and Success</strong>.</p>
+                        <br/>
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Metrics - Predefined</h1>
+                        <p>
+                            <span style="color: #adadad;">Complexity Level:</span> [1-4] Easy|Medium|Advance|Expert
+                            <br/>
+                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                            <br/>
+                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Freelance|Startup|Support|Research
+                            <br/>
+                            <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                            <br/>
+                            <span style="color: #adadad;">Technologies Used:</span> (Information about various or key technologies used)
+                            <br/>
+                            <span style="color: #adadad;">Domain Useful For:</span> Commerce, Communications, Computers, IT, Electronics, Electrical, Mechanical,
+                            Civil, Science, Arts, Management, Entrepreneurial, Marketing, Branding, Sales, Media, Human Resources,
+                            Finance, Analytics, Psychometrics, Teaching, Counselling and many other.
+                            <br/>
+                            <span style="color: #f72323;">COMMON DOMAINS FOR ANY PROJECT MENTIONED HERE:</span> Project Management, Marketing, Sales, Branding,
+                            Human Resources, Finance and Entrepreneurship
+                            <br/>
+                            <span style="color: #adadad;">Development Stage:</span> Ideation - Planning - Execution - Monitoring - Into Market
+                            <br/>
+                        </p>
+                        <br/>
+                        <br/>
+                    </div>
+
+
+                    <div class="one_half text-right ">
+                            <h1 style="color: #014781;">Search for skills</h1>
+                        </div>
+
+                    <div class="one_half last">
+                        <div id="header">
+
+
+                        </div>
+                    </div>
+
+                    
+                    
+                    <div class="clear"></div>
+
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">1. Emotional Chat-Bot</h1>
+                                        <p> Able to speak back to user with customized emotional verbal exchange and added voice tone to verbalize the same way a person with certain specified expresses their thoughts and feelings. This project is to reduce emotional imbalance and get people out of depression for overall healthy development of lifestyle.
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Planning
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> 5-500
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last ">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [3] Advance 
+                                            <br/> 
+                                            <span style="color: #adadad;">Work Style:</span> Individual| Team 
+                                            <br/> 
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource| Startup 
+                                            <br/> 
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home 
+                                            <br/> 
+                                            <span style="color: #adadad;">Technologies Used:</span> AI, NLP, ML 
+                                            <br/> 
+                                            <span style="color: #adadad;">Domain Useful For:</span> Psychology, Communications, Computers, IT. 
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                                    
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">2. Career Counselling (+2 &amp; graduation)</h1>
+                                        <p>Career counselling by trained practioners and experts in respective fields to all the students who joins us and career guidance support after 10th or +2 for choosing right career depending on their abilities, mindset, interests, and passion for every student who comes for assistance. Our members who are having passion will be trained by us to take counselling and guidance using scientifically proven metrics and psychometrics to assess students in best way possible for right career direction and overall career success.
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Execution
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [2] Medium
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Support
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> onField
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> Psychometrics
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> All
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                                    
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+
+                                <div class="one_half text-right " >
+                                        <h1 style="color: #014781;">3. GIFT E-Commerce</h1>
+                                        <p>Building a complete e-commerce website that every individual can put in their creative collection in our website and can sell them out to those who would like to buy things as a gift for their loved ones. An open source platform to put everyone's creative pursuit to world outside who can appreciate their efforts.
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Planning
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> 10-500
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [4] Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Startup
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> react Js, Express JS, MongoDB and web technologies
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Computers, IT.
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                                    
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right " >
+                                        <h1 style="color: #014781;">4. Game Development</h1>
+                                        <p>Creating Games on various platforms PSP, VR, PC, XBox, PS4, Android, IOS and many other plaforms which support OpenGL. Developing Action, action-adventure, role playing, simulation, strategy, sports, racing, survival and many more generes games we create and take it into market. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Execution - Monitoring
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                    <p>
+                                        <span style="color: #adadad;">Complexity Level:</span> [2,3] Medium|Advance
+                                        <br/>
+                                        <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                        <br/>
+                                        <span style="color: #adadad;">Type Of Project:</span> Startup|Support|Research
+                                        <br/>
+                                        <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                        <br/>
+                                        <span style="color: #adadad;">Technologies Used:</span> UnReal Engine, Unity 3D, VR, AR
+                                        <br/>
+                                        <span style="color: #adadad;">Domain Useful For:</span> Any
+                                        <br/>
+                                    </p>
+                                    <br/>
+                                    <br/>
+        
+                                </div>
+                                
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">5. My Child's Success A-Z</h1>
+                                        <p>Student Management software with agumented-reality attached watch which tracks gps, overall performance, mind-set, interests, sleeping cycle, health management, friends engagement, activities tracking and compolete report of kid's inclination towards which career direction and growth through proper visual reports for teachers, parents and gurdians to support, guide, help and evaluate kid in right direction for success in life. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Ideation
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> 100 - Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                    <p>
+                                        <span style="color: #adadad;">Complexity Level:</span> [4] Expert
+                                        <br/>
+                                        <span style="color: #adadad;">Work Style:</span> Team
+                                        <br/>
+                                        <span style="color: #adadad;">Type Of Project:</span> Startup|Research
+                                        <br/>
+                                        <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField
+                                        <br/>
+                                        <span style="color: #adadad;">Technologies Used:</span> IOT, web technologies, mobile app technologies
+                                        <br/>
+                                        <span style="color: #adadad;">Domain Useful For:</span>  Communications, Computers, IT, Electronics, Electrical,
+                                        Entrepreneurial.
+                                        <br/>
+                                    </p>
+                                    <br/>
+                                    <br/>
+        
+                                </div>
+                                
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">6. PM Tool</h1>
+                                        <p>Creating our own personalized Project Mangement engagement tool to monitor and evaluate the whole project cycle by our students in executing various tasks we assign each one of them. Practicing latest PM rules and adding up our own formulae for grater success rate in project executions. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Ideation
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> 20-100
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [4] Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Startup|Support
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> web and app technologies, analytics
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Communications, Computers, IT, Management, Entrepreneurial, Human Resources, Analytics
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                                   
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">7. Youtube Channel</h1>
+                                        <p>Engaging teens/youth/students with fun, interesting, growth oriented, interactive, live videos and boosting up our brand through online medium on various social media channels using our youtube channel page. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Execution
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                    <p>
+                                        <span style="color: #adadad;">Complexity Level:</span> [2] Medium
+                                        <br/>
+                                        <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                        <br/>
+                                        <span style="color: #adadad;">Type Of Project:</span> Research
+                                        <br/>
+                                        <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                        <br/>
+                                        <span style="color: #adadad;">Technologies Used:</span> video making, direction, creative thinking, content writing, design development
+                                        <br/>
+                                        <span style="color: #adadad;">Domain Useful For:</span> Any
+                                        <br/>
+                                    </p>
+                                    <br/>
+                                    <br/>
+        
+                                </div>
+                                
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">8. DIY Development - Kids</h1>
+                                        <p>Developing easy to learn while having fun playing the games we make them develop through our easy Do-It-Yourself projects for students to learn science and Maths in most enjoyable ways. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Planning
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                    <p>
+                                        <span style="color: #adadad;">Complexity Level:</span> [1,2] Easy|Medium
+                                        <br/>
+                                        <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                        <br/>
+                                        <span style="color: #adadad;">Type Of Project:</span> Startup|Research
+                                        <br/>
+                                        <span style="color: #adadad;">Job Type:</span> onField
+                                        <br/>
+                                        <span style="color: #adadad;">Technologies Used:</span> creative mindeset, motor skills, core subject skills
+                                        <br/>
+                                        <span style="color: #adadad;">Domain Useful For:</span> Any
+                                        <br/>
+                                    </p>
+                                    <br/>
+                                    <br/>
+        
+                                </div>
+                                
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">9. DIY Development - Graduates</h1>
+                                        <p>Develpoing the culture of learning things through practice rather than only texts and video is what we beleive in. To achieve that, we work on various topics creating most creative, fun, easy and simple ways to learn complex subjects through practical execution. Making prototypes to learn and teach technologies in most user friendly ways, 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Planning 
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                    <p>
+                                        <span style="color: #adadad;">Complexity Level:</span> [3] Advance
+                                        <br/>
+                                        <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                        <br/>
+                                        <span style="color: #adadad;">Type Of Project:</span> Startup|Research
+                                        <br/>
+                                        <span style="color: #adadad;">Job Type:</span> onField
+                                        <br/>
+                                        <span style="color: #adadad;">Technologies Used:</span> creative mindeset, motor skills, core subject skills
+                                        <br/>
+                                        <span style="color: #adadad;">Domain Useful For:</span> Any
+                                        <br/>
+                                        
+                                    </p>
+                                    <br/>
+                                    <br/>
+        
+                                </div>
+                                
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">10. Design Community</h1>
+                                        <p>Developing design engineering projects by Mechanical, automobile, aeronautics, aerospace, civil students and the designs will be submitted to industries for further enhancements of new projects.
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Ideation - Planning
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [3,4] Advance|Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Research
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> AutoCad, Sketch, UnReal Engine, Unity 3D
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Mechanical, Civil, Entrepreneurial
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                                    
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">11. Local Business Development</h1>
+                                    <p>Tuning up the business outreach of local businesses using our PRO solutions, web apps, mobile apps and flexible e-commerce solutions to make the local businesses outreach to more of their customers in most simplified ways. 
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Planning - Execution
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [2-4] Medium|Advance|Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Startup|Support
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> onField
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> Web / Mobile based apps development, Business Analytics
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Any
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">12. AR Machine Analysis</h1>
+                                    <p>Creating visual simulations of machines, engines and chasis using Unreal Engine, Unity 3D, Sketch and other latest technologies to make learning and building prototypes the most simplified way possible at lowest budgets (almost free). Studets, don't need to buy heavy equipment, out lot of finance, or need huge space to build world class engines, machines, automobiles or anything they dream to build or learn. 
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Planning - Execution
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [3,4] Advance|Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Support|Research
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> AutoCad, Sketch, UnReal Engine, Unity 3D
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Mechanical, Civil and related branches
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">13. Cyber Security</h1> 
+                                    <p>"Bug Fixing", "Vulnerability Assessment", "Penetration Testing" as a Penetration Tester and Cyber-Security Analyst working on live projects from global connected companies through us. (example: Netflix, Pinterest, Bitdefender, Twilio, Fitbit, Mastercard and much more).
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Execution - Monitoring - Into Market
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [3,4] Advance|Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Freelance|Startup|Support|Research
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Skills Needed:</span> kali linux, penetration testing, bug fixing, vulnerability assessment
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Any
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">14. VR|AR House Design</h1>
+                                        <p>Virtually redesigning the whole house in holographic, virtual platform to see the whoile structure in 3D and then remodle them within the reach of using fingures for our international cleints all over the world. Will work on Sketch, Unreal Engine, Unity 3D, VR technologies to build realtime viewing of real estate designs to give more user friendly and luxurious experience to the buyers. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Execution - Monitoring - Into Market
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> 10-500
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [2,3] Medium|Advance
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Startup|Support
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> AutoCad, Sketch, UnReal Engine, Unity 3D
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Civil, Architecture
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                                    
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">15. Text Book to Fun Book</h1>
+                                        <p>converting text book information to more personalized, simple, easy, interesting, fun way for every individual by assessing their mindset, ease of learning, way of learning, time they spend average on learning, their interests, what they feel more interested, feeling fun about and then using the information to rebuild texts from textbook to user friendly level. To make education more personalized and more impacting each individuals. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Ideation - Planning
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                <div class="one_half last">
+                                    <p>
+                                        <span style="color: #adadad;">Complexity Level:</span> [4] Expert
+                                        <br/>
+                                        <span style="color: #adadad;">Work Style:</span> Team
+                                        <br/>
+                                        <span style="color: #adadad;">Type Of Project:</span> Startup|Research
+                                        <br/>
+                                        <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                        <br/>
+                                        <span style="color: #adadad;">Technologies Used:</span> Big Data Analytics, Machine Learning, NLP, Deep Learning, Python, R
+                                        <br/>
+                                        <span style="color: #adadad;">Domain Useful For:</span> Computers, IT
+                                        <br/>
+                                    </p>
+                                    <br/>
+                                    <br/>
+        
+                                </div>
+                                
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">16. Talent| Skill Test</h1>
+                                    <p>Conducting quarterly talent skill tests for school kids and also for under graduate students to win prizes and get other benefits . Making people explore their learning skills through our serial tests we conduct every year from general intelligence tests to specific domain tests.
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Monitoring - Into Market
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [1-4] Easy|Medium
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Startup|Support
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> Web development tools, psychometrics, assessment, test preparation
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Any
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">17. CyrptoCurrency - FBT Students</h1>
+                                    <p>Using blockchain technoligies, creating a crypto currncy 'for the students, by the students, to the students' community. Redesigning the complexity of money handling to more digitalized and more secure way of tracking the overall expenditures over their education time. 
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Ideation
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> 150
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [4] Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Startup|Research
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> blockchain, smart contracts creation
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Computers, IT or any
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">18. Portfolio Development</h1>
+                                    <p>Developing customized infographic portfolio for professionals, professors, experts, students, and all those who need through our CMS based easy profile development platform to make crating resumes in much simple, easier, creative and social media connection interlinked ways. 
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Execution - Monitoring - Into Market
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> 5-50
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [2] Medium
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Startup|Support
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> JS frame works, web development tools, cms development, UX Design
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Computers, IT
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">19. PRO Solutions</h1>
+                                    <p>From 'the start - to end' of any event or branding will be designed by our PRO team and will be executed according to the needs of the customer profile and budget in most amazing, structured, ninche market imparting ways by our event management team, online brand mangement team, technology team, promoting team and media team. Structured packages for customers with small budgets to huge budgets using all the tools we develop from our side through online, offline spreading of the information. 
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Planning - Execution
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [2-4] Medium|Advance|Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Freelance|Startup
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> Digital Marketing, SEO, Brand Management tools 
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Commerce, Communications, HR, Management or any
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">20. MOOC's Site</h1>
+                                    <p>Making learning more accessible to students for learning latest technologies for FREE or at Lowest cost possible and people can start building their dreams without thinking of financial hurdles. We want to make education be revolutionalized by our structures, simple, easier, concrete, fun, engaging training videos by experts in their field accessile to whole community of learners around the world for FREE or at Lowest price possible (to charge just for handling our servers)
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Planning
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> Not In Specific but minimum 25
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [3,4] Advance|Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Startup
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> web development tools, video making tools, video editing tools, graphic design tools, UX/UI Design, Data Analytics, AI, ML
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Any
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                    <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">21. Media House</h1>
+                                        <p>Running a fulltime student oriented , non-commercialized, student growth centric, student appreciation centric, student inspiration centric media house for student community to be collective explorers of their success career paths. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Planning - Execution
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                    <div class="one_half last">
+                                            <p>
+                                                <span style="color: #adadad;">Complexity Level:</span> [1-4] Easy|Medium|Advance
+                                                <br/>
+                                                <span style="color: #adadad;">Work Style:</span> Team
+                                                <br/>
+                                                <span style="color: #adadad;">Type Of Project:</span> Freelance|Startup|Support
+                                                <br/>
+                                                <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                                <br/>
+                                                <span style="color: #adadad;">Technologies Used:</span> Digital Marketing, SEO, Brand Management tools, Creative skills, Communication, Written skills, designing tools, editing tools
+                                                <br/>
+                                                <span style="color: #adadad;">Domain Useful For:</span> Commerce, Arts, Management, Entrepreneurial, Marketing, Branding, Sales, Media or any 
+                                                <br/>
+                                            </p>
+                                            <br/>
+                                            <br/>
+                
+                                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                    <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">22. E-Magazine</h1>
+                                        <p>Online student magazine which covers the success stories of young stars who have made an impactful efforts in their lives and people lives around them. Inspirational speakers interviews and lots more that covers the good, bright, positive news of the world running technologies, jobs market, education opportunities in various universities and lot more. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Planning - Execution
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                    <div class="one_half last">
+                                            <p>
+                                                <span style="color: #adadad;">Complexity Level:</span> [1,2] Easy|Medium
+                                                <br/>
+                                                <span style="color: #adadad;">Work Style:</span> Team
+                                                <br/>
+                                                <span style="color: #adadad;">Type Of Project:</span> Support
+                                                <br/>
+                                                <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                                <br/>
+                                                <span style="color: #adadad;">Technologies Used:</span> Digital Marketing, SEO, Brand Management tools, editing tools
+                                                <br/>
+                                                <span style="color: #adadad;">Domain Useful For:</span> Commerce or any
+                                                <br/>
+                                            </p>
+                                            <br/>
+                                            <br/>
+                
+                                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">23. Self-Assessment Site</h1>
+                                    <p>Creating self assessment site that can help world wide people to know their skills, interests, traits, values, planning short-term, long-term goals, doing SWOT analysis, go through psychometric tests and getting overall vidual friendly report about all of them in a conclusion page. This can help millions of people in aiming for right career direction to reach success in life. 
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Execution - Monitoring
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> 10-150
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [1-4] Medium
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> OpenSource|Research
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> Web Development tools, Psychometrics, Data Analytics, ML, AI, UX/UI Design, JS Frameworks
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Computers, IT, Entrepreneurial, Human Resources, Analytics, Psychometrics, Teaching, Counselling
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                    <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">24. Freelance Website</h1>
+                                        <p>Making evry house hold elders, senior citizens, home makers, non working professionals, students, passionate young kids and open for everyone to put in their skills to practice from small ones to big professional skills. helping elders nearby, tutoring kids around the house, helping neighbours, teaching a new skill to someone nearby, typing, writing, speaking, assisting, developing web apps, phone apps, designing posters, logos, business cards, creating toys, teaching DIY,doing summer camp, cooking for working professionals/elders/kids around the society and lot more ways to earn through our medium. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Planning
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> minimum 20
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                    <div class="one_half last">
+                                            <p>
+                                                <span style="color: #adadad;">Complexity Level:</span> [3,4] Advance|Expert
+                                                <br/>
+                                                <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                                <br/>
+                                                <span style="color: #adadad;">Type Of Project:</span> Startup
+                                                <br/>
+                                                <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                                <br/>
+                                                <span style="color: #adadad;">Technologies Used:</span> Web tools, Data Analytics, ML, AI, JS Frameworks
+                                                <br/>
+                                                <span style="color: #adadad;">Domain Useful For:</span> Entrepreneurial or any
+                                                <br/>
+                                            </p>
+                                            <br/>
+                                            <br/>
+                
+                                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                <div class="one_half text-right ">
+                                    <h1 style="color: #014781;">25. Freelance Services</h1>
+                                    <p>Connecting our members to Freelance websites existing in the market and helping our members bid for getting freelance projects and make them work on those to build up their skills set, professional work ethics, earn-while learning opportunities for every member who joins us. 
+                                        <br/>
+                                        <span style="color: #adadad;">Development Stage:</span> Execution - Monitoring - Into Market
+                                        <br/>
+                                        <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                        <br/>
+                                    </p>
+                                    <br/>
+        
+                                </div>
+                                <div class="one_half last">
+                                        <p>
+                                            <span style="color: #adadad;">Complexity Level:</span> [1-4] Easy|Medium|Advance|Expert
+                                            <br/>
+                                            <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                            <br/>
+                                            <span style="color: #adadad;">Type Of Project:</span> Freelance
+                                            <br/>
+                                            <span style="color: #adadad;">Job Type:</span> Work-From-Home
+                                            <br/>
+                                            <span style="color: #adadad;">Technologies Used:</span> writting, creative design, design tools, web development tools, app development tools, communication tools, typing skills, web assisting tools, digital marketing tools, SEO tools
+                                            <br/>
+                                            <span style="color: #adadad;">Domain Useful For:</span> Any
+                                            <br/>
+                                        </p>
+                                        <br/>
+                                        <br/>
+            
+                                    </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="entry">
+                        <div class="movieTitle">
+                                
+                                    <div class="one_half text-right ">
+                                        <h1 style="color: #014781;">26. Opensource Projects</h1>
+                                        <p>We work on Multiple Opensource projects realted to latest technologies in enhacing the usability and development service that we can provide to bright developing platforms which can make a huge impact in the world for future generations to come through our members. 
+                                            <br/>
+                                            <span style="color: #adadad;">Development Stage:</span> Execution - Monitoring
+                                            <br/>
+                                            <span style="color: #adadad;">Professionals Needed:</span> Not In Specific
+                                            <br/>
+                                        </p>
+                                        <br/>
+            
+                                    </div>
+                                    <div class="one_half last">
+                                            <p>
+                                                <span style="color: #adadad;">Complexity Level:</span> [1-4] Easy|Medium|Advance|Expert
+                                                <br/>
+                                                <span style="color: #adadad;">Work Style:</span> Individual|Team
+                                                <br/>
+                                                <span style="color: #adadad;">Type Of Project:</span> OpenSource|Research
+                                                <br/>
+                                                <span style="color: #adadad;">Job Type:</span> Work-From-Home|onField|Both
+                                                <br/>
+                                                <span style="color: #adadad;">Technologies Used:</span> Any 
+                                                <br/>
+                                                <span style="color: #adadad;">Domain Useful For:</span> Any
+                                                <br/>
+                                            </p>
+                                            <br/>
+                                            <br/>
+                
+                                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="clear"></div>
+
+                    
+                    <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Contact To Work On Our Latest Projects</h1>
+                    <p style="text-align:center; color:#f72323;"><STRONG>*</STRONG>PROJECTS ARE OPEN FOR MEMBERS ONLY<STRONG>*</STRONG></p>
+                    <br/>
+                    <div class="content-wrapper">
+                        <div class="one_half ">
+                            <p>You can post your interest in which project here and can directly contact us through email as well for any further information at "projects@imbuedesk.com".</p>
+                            <br>
+                            <p><strong><span style="color: #e64b77;">Membership Details</span></strong> email us at "membership@imbuedesk.com".</p>
+                        </div>
+                        <div class="one_half last">
+<form name="contactform" method="post" action="send_form_email.php">
+                            <div class="contact-form">
+                                <label for="first_name">Name *</label>
+                                <p><input id="name" type="text" name="first_name" placeholder="Name"></p>
+                                <label for="email">Email Address *</label>
+                                <p><input id="contact-email" type="email" name="email" placeholder="Email"></p>
+                                <label for="telephone">Contact Number *</label>
+                                <p><input type="text" name="telephone" placeholder="Contact Number"></p>
+                                <label for="subject">Subject</label>
+                                <p><input id="subject" type="text" name="subject" placeholder="Subject"></p>
+                                <label for="comments">Message *</label>
+                                <p><textarea id="message" name="comments" placeholder="Message"></textarea></p>
+                                <p><input type="submit" value="Submit" onClick="SendMail()" ></p>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                <!-- Footer -->
+                <footer>
+                    <div class="footer content-1170 center-relative">
+                        <ul>
+                            <li class="copyright-footer">
+                                ©2018-19 All rights reserved. | ImbueDesk ENS Pvt. Ltd.
+                                <a href="www.imbuedesk.com" target="_blank">ImbueDesk</a>
+                            </li>
+                            <li class="social-footer">
+                                <a href="https://in.linkedin.com/company/imbuedesk" target="_blank">
+                                    <span class="fa fa-linkedin"></span>
+                                </a>
+                                <a href="https://twitter.com/imbuedesktweets" target="_blank">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a href="https://plus.google.com/+ImbueDesk" target="_blank">
+                                    <span class="fa fa-google"></span>
+                                </a>
+                                <a href="https://www.facebook.com/imbuedesk/" target="_blank">
+                                    <span class="fa fa-facebook"></span>
+                                </a>
+                                <a href="https://picasso999.blogspot.in" target="_blank">
+                                    <span class="fa fa-rss"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+    </article>
+
+
+
+
+    <!--Load JavaScript-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type='text/javascript' src='js/jquery.sticky-kit.min.js'></script>
+    <script type='text/javascript' src='js/jquery.smartmenus.min.js'></script>
+    <script type='text/javascript' src='js/jquery.sticky.js'></script>
+    <script type='text/javascript' src='js/jquery.dryMenu.js'></script>
+    <script type='text/javascript' src='js/isotope.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.carouFredSel-6.2.0-packed.js'></script>
+    <script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+    <script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
+    <script type='text/javascript' src='js/main.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>ImbueDesk - Privacy Terms</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="ImbueDesk" />
+    <meta name="keywords" content="Career, student, development, startup, India, education, college, university" />
+    <meta name="author" content="Puranam Pradeep Picasso" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="demo-images/logo.png" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i,900|Montserrat:400,700|PT+Serif' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href='css/clear.css' />
+    <link rel="stylesheet" type="text/css" href='css/common.css' />
+    <link rel="stylesheet" type="text/css" href='css/font-awesome.min.css' />
+    <link rel="stylesheet" type="text/css" href='css/carouFredSel.css' />
+    <link rel="stylesheet" type="text/css" href='css/prettyPhoto.css' />
+    <link rel="stylesheet" type="text/css" href='css/sm-clean.css' />
+    <link rel="stylesheet" type="text/css" href='style1.css' />
+
+    <!--[if lt IE 9]>
+                <script src="js/html5.js"></script>
+        <![endif]-->
+
+    <style>
+        input {
+            border: 2px solid rgb(180, 34, 34);
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            /* position: relative;
+        display: block;*/
+            text-align: center;
+            font-size: 2em;
+            *height: 1.5em;
+            line-height: 1.5em;
+            padding: 0.29em 0;
+            margin: 0 0 0.5em;
+            width: 80%;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script>
+        (function($) {
+            jQuery.expr[':'].Contains = function(a, i, m) {
+                return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+            };
+
+            function listFilter(header, list) {
+                var form = $("<form>").attr({
+                        "class": "filterform",
+                        "action": "#"
+                    }),
+                    input = $("<input>").attr({
+                        "class": "filterinput",
+                        "type": "text"
+                    });
+                $(form).append(input).appendTo(header);
+
+                $(input)
+                    .change(function() {
+                        var filter = $(this).val();
+                        if (filter) {
+                            $(list).find(".movieTitle:not(:Contains(" + filter + "))").parent().slideUp();
+                            $(list).find(".movieTitle:Contains(" + filter + ")").parent().slideDown();
+                        } else {
+                            $(list).find(".entry").slideDown();
+                        }
+                        return false;
+                    })
+                    .keyup(function() {
+                        $(this).change();
+                    });
+            }
+
+            $(function() {
+                listFilter($("#header"), $("#list"));
+            });
+        }(jQuery));
+    </script>
+
+</head>
+
+<body class="single-portfolio">
+
+    <!-- Preloader Gif -->
+    <!-- <table class="doc-loader">
+        <tr>
+            <td>
+                <img src="demo-images/logo.png" alt="Loading..." />
+            </td>
+        </tr>
+    </table> -->
+
+    <!-- Menu -->
+    <div class="menu-wrapper center-relative">
+        <nav id="header-main-menu">
+            <div class="mob-menu">MENU</div>
+            <ul class="main-menu sm sm-clean">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Mastery</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#news">Blog</a>
+                </li>
+                <li>
+                    <a href="#video">Video</a>
+                </li>
+                <li>
+                    <a href="#skills">Success</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <article id="portfolio-1" class="section portfolio">
+        <div class="center-relative content-1170">
+            <div class="entry-content" id="wrap">
+
+                <div class="content-wrap relative" id="list">
+                    <a class="absolute x-close" href="index.html#portfolio">
+                        <img src="images/icon_x.svg" alt="Close">
+                    </a>
+
+                    <div class="one margin-0">
+                        <img src="images/home_banner.png" alt="">
+                    </div>
+                    <!-- <div class="clear"></div> -->
+                    <!-- <div class="one_half margin-0">
+                            <img src="demo-images/item_img_02.jpg" alt="">
+                        </div>
+                        <div class="one_half text-right margin-0">
+                            <img src="demo-images/item_img_03.jpg" alt="">
+                        </div>
+                        <div class="clear"></div> -->
+
+                    <div class="section-content-holder" style="position:relative">
+                        <!-- <div class="content-wrapper"> -->
+                        <div class="content-title-holder">
+                            <p class="content-title" style="font-size:5.5em !important;">Terms of Service</p>
+                        </div>
+
+
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="one section-content-holder text-center">
+
+                        <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Imbuedesk Educational Networking Solutions Private Limited Terms of Service</h1>
+                        <h3>1. Terms</h3>
+                        <p>By accessing the website at <a href="http://www.imbuedesk.com">http://www.imbuedesk.com</a>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance
+                            with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark
+                            law.</p>
+                        <h3>2. Use License</h3>
+                        <ol type="a">
+                            <li>Permission is granted to temporarily download one copy of the materials (information or software) on Imbuedesk Educational Networking Solutions Private Limited's website for personal, non-commercial transitory viewing only.
+                                This is the grant of a license, not a transfer of title, and under this license you may not:
+                                <ol type="i">
+                                    <li>modify or copy the materials;</li>
+                                    <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
+                                    <li>attempt to decompile or reverse engineer any software contained on Imbuedesk Educational Networking Solutions Private Limited's website;</li>
+                                    <li>remove any copyright or other proprietary notations from the materials; or</li>
+                                    <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+                                </ol>
+                            </li>
+                            <li>This license shall automatically terminate if you violate any of these restrictions and may be terminated by Imbuedesk Educational Networking Solutions Private Limited at any time. Upon terminating your viewing of these materials
+                                or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</li>
+                        </ol>
+                        <h3>3. Disclaimer</h3>
+                        <ol type="a">
+                            <li>The materials on Imbuedesk Educational Networking Solutions Private Limited's website are provided on an 'as is' basis. Imbuedesk Educational Networking Solutions Private Limited makes no warranties, expressed or implied, and
+                                hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other
+                                violation of rights.</li>
+                            <li>Further, Imbuedesk Educational Networking Solutions Private Limited does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise
+                                relating to such materials or on any sites linked to this site.</li>
+                        </ol>
+                        <h3>4. Limitations</h3>
+                        <p>In no event shall Imbuedesk Educational Networking Solutions Private Limited or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising
+                            out of the use or inability to use the materials on Imbuedesk Educational Networking Solutions Private Limited's website, even if Imbuedesk Educational Networking Solutions Private Limited or a Imbuedesk Educational Networking
+                            Solutions Private Limited authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability
+                            for consequential or incidental damages, these limitations may not apply to you.</p>
+                        <h3>5. Accuracy of materials</h3>
+                        <p>The materials appearing on Imbuedesk Educational Networking Solutions Private Limited's website could include technical, typographical, or photographic errors. Imbuedesk Educational Networking Solutions Private Limited does not
+                            warrant that any of the materials on its website are accurate, complete or current. Imbuedesk Educational Networking Solutions Private Limited may make changes to the materials contained on its website at any time without notice.
+                            However Imbuedesk Educational Networking Solutions Private Limited does not make any commitment to update the materials.</p>
+                        <h3>6. Links</h3>
+                        <p>Imbuedesk Educational Networking Solutions Private Limited has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement
+                            by Imbuedesk Educational Networking Solutions Private Limited of the site. Use of any such linked website is at the user's own risk.</p>
+                        <h3>7. Modifications</h3>
+                        <p>Imbuedesk Educational Networking Solutions Private Limited may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms
+                            of service.</p>
+                        <h3>8. Governing Law</h3>
+                        <p>These terms and conditions are governed by and construed in accordance with the laws of Hyderabad, India and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+
+
+                <h1 style="text-align:center; color:#f72323; font-size:1.5em;">Contact For Further Details</h1>
+                <p style="text-align:center; color:#f72323;">
+                    <STRONG>*</STRONG>We welcome Suggestions!
+                    <STRONG>*</STRONG>
+                </p>
+                <br/>
+                <div class="content-wrapper">
+                    <div class="one_half ">
+                        <p>You can contact us for further queries regarding our policy and Terms of Service at "contact@imbuedesk.com".</p>
+                        <br>
+                        <p><strong><span style="color: #e64b77;">Membership Details</span></strong> email us at "membership@imbuedesk.com".</p>
+                    </div>
+                    <div class="one_half last">
+                        <form name="contactform" method="post" action="send_form_email.php">
+                            <div class="contact-form">
+                                <label for="first_name">Name *</label>
+                                <p><input id="name" type="text" name="first_name" placeholder="Name"></p>
+                                <label for="email">Email Address *</label>
+                                <p><input id="contact-email" type="email" name="email" placeholder="Email"></p>
+                                <label for="telephone">Contact Number *</label>
+                                <p><input type="text" name="telephone" placeholder="Contact Number"></p>
+                                <label for="subject">Subject</label>
+                                <p><input id="subject" type="text" name="subject" placeholder="Subject"></p>
+                                <label for="comments">Message *</label>
+                                <p><textarea id="message" name="comments" placeholder="Message"></textarea></p>
+                                <p><input type="submit" value="Submit" onClick="SendMail()"></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer content-1170 center-relative">
+                    <ul>
+                        <li class="copyright-footer">
+                            ©2018-19 All rights reserved. | ImbueDesk ENS Pvt. Ltd.
+                            <a href="www.imbuedesk.com" target="_blank">ImbueDesk</a>
+                        </li>
+                        <li class="social-footer">
+                            <a href="https://in.linkedin.com/company/imbuedesk" target="_blank">
+                                <span class="fa fa-linkedin"></span>
+                            </a>
+                            <a href="https://twitter.com/imbuedesktweets" target="_blank">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                            <a href="https://plus.google.com/+ImbueDesk" target="_blank">
+                                <span class="fa fa-google"></span>
+                            </a>
+                            <a href="https://www.facebook.com/imbuedesk/" target="_blank">
+                                <span class="fa fa-facebook"></span>
+                            </a>
+                            <a href="https://picasso999.blogspot.in" target="_blank">
+                                <span class="fa fa-rss"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+    </article>
+
+
+
+
+    <!--Load JavaScript-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type='text/javascript' src='js/jquery.sticky-kit.min.js'></script>
+    <script type='text/javascript' src='js/jquery.smartmenus.min.js'></script>
+    <script type='text/javascript' src='js/jquery.sticky.js'></script>
+    <script type='text/javascript' src='js/jquery.dryMenu.js'></script>
+    <script type='text/javascript' src='js/isotope.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.carouFredSel-6.2.0-packed.js'></script>
+    <script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+    <script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
+    <script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
+    <script type='text/javascript' src='js/main.js'></script>
+</body>
+
+</html>
